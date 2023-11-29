@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { elementorCommon } from './elementorCommon.js';
+import { JSON1, SCREENSHOT_DARK_1, SCREENSHOT_LIGHT_1, URL1, URL2 } from './mock';
 
 window.elementorCommon = elementorCommon;
-
-window.ElementorAiConfig = {
-	url_to_container_url: 'http://localhost:3000',
-};
 
 import LayoutApp from './../../elementor-editor-env/plugins/elementor/modules/ai/assets/js/editor/layout-app.js';
 
@@ -18,6 +15,7 @@ ReactDOM.createRoot( document.getElementById( 'root' ) ).render(
 			position: 'absolute',
 		}}>
 			<LayoutApp
+				mode="layout"
 				attachmentsTypes={{
 					json: {
 						promptSuggestions: [
@@ -32,17 +30,17 @@ ReactDOM.createRoot( document.getElementById( 'root' ) ).render(
 							{ text: '[URL] Create a layout for a product page' },
 							{ text: '[URL] Create a layout for a contact page' },
 						],
-
 					},
 				}}
-				attachments={[{
-						type: 'url',
-						previewHTML: ``,
-						content: '{}',
-						label: 'domain.com',
-					}]}
+				attachments={[
+					// { ...URL1 },
+					// { ...URL2 },
+					// { ...JSON1 },
+				]}
 				onData={() => {
 					console.log( 'onData' );
+					// return SCREENSHOT_LIGHT_1;
+					// return SCREENSHOT_DARK_1;
 				}}
 				onConnect={() => {
 					console.log( 'onConnect' );

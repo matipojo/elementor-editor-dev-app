@@ -14,7 +14,7 @@ export const elementorCommon = {
 				case 'ai_get_remote_config':
 					return options.success( {
 						config: {
-							webBasedBuilderUrl: 'http://localhost:3000',
+							webBasedBuilderUrl: 'http://localhost:3000/choose-element',
 						},
 					} );
 				case 'ai_get_user_information':

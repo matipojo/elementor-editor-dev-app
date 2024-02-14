@@ -4,6 +4,21 @@ import { elementorCommon } from './elementorCommon.js';
 import { JSON1, SCREENSHOT_DARK_1, SCREENSHOT_LIGHT_1, URL1, URL2 } from './mock';
 
 window.elementorCommon = elementorCommon;
+window.elementor = {
+	config: {
+		version: '3.19.2',
+		user: {
+			is_administrator: true,
+		},
+	}
+}
+window.elementorAppConfig = {
+	'kit-library': {
+		access_level: 0,
+		access_tier: 'free',
+		is_pro: false,
+	},
+};
 
 import LayoutApp from './../../elementor-editor-env/plugins/elementor/modules/ai/assets/js/editor/layout-app.js';
 import { DirectionProvider, ThemeProvider } from '@elementor/ui';
@@ -15,7 +30,7 @@ ReactDOM.createRoot( document.getElementById( 'root' ) ).render(
 			padding: '50px',
 			position: 'absolute',
 		}}>
-			<DirectionProvider rtl={ false }>
+			<DirectionProvider rtl={false}>
 				<ThemeProvider colorScheme="auto">
 					<LayoutApp
 						mode="layout"

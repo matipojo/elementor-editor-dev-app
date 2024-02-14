@@ -15,6 +15,7 @@ export const elementorCommon = {
 					return options.success( {
 						config: {
 							webBasedBuilderUrl: 'http://localhost:3000/choose-element',
+							jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMjYyNDI1Nn0sIndlYnNpdGUiOnsidXJsIjoiaHR0cDovL2xvY2FsaG9zdDo4ODg4LyJ9LCJzdWJzY3JpcHRpb24iOnt9LCJpYXQiOjE3MDUzMTg2NTgsImV4cCI6MTcwNTMyMjI1OH0.z6kr-lxm0-gN5dyk8vkGrE5n7Py6N5ctvO0lU-PAvE8',
 						},
 					} );
 				case 'ai_get_user_information':
@@ -22,7 +23,6 @@ export const elementorCommon = {
 						'is_connected': true,
 						'is_get_started': true,
 						'usage': {
-							builderUrl: 'http://localhost:3000',
 							'hasAiSubscription': false,
 							'usedQuota': 440,
 							'quota': 660,

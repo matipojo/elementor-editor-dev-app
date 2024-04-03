@@ -6,7 +6,7 @@ import { JSON1, SCREENSHOT_DARK_1, SCREENSHOT_LIGHT_1, URL1, URL2 } from './mock
 window.elementorCommon = elementorCommon;
 window.elementor = {
 	config: {
-		version: '3.19.2',
+		version: '3.21.2',
 		user: {
 			is_administrator: true,
 		},
@@ -20,7 +20,7 @@ window.elementorAppConfig = {
 	},
 };
 
-import LayoutApp from './../../elementor-editor-env/plugins/elementor/modules/ai/assets/js/editor/layout-app.js';
+import LayoutApp from '../../elementor-core/modules/ai/assets/js/editor/layout-app.js';
 import { DirectionProvider, ThemeProvider } from '@elementor/ui';
 
 ReactDOM.createRoot( document.getElementById( 'root' ) ).render(

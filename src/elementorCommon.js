@@ -1,4 +1,7 @@
 export const elementorCommon = {
+	config: {
+		version: '3.20.1',
+	},
 	ajax: {
 		addRequest: ( endpoint, options ) => {
 			switch (endpoint) {
@@ -14,7 +17,7 @@ export const elementorCommon = {
 				case 'ai_get_remote_config':
 					return options.success( {
 						config: {
-							webBasedBuilderUrl: 'http://localhost:3000/choose-element',
+							webBasedBuilderUrl: 'http://localhost:4000/choose-element',
 							jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxMjYyNDI1Nn0sIndlYnNpdGUiOnsidXJsIjoiaHR0cDovL2xvY2FsaG9zdDo4ODg4LyJ9LCJzdWJzY3JpcHRpb24iOnt9LCJpYXQiOjE3MDUzMTg2NTgsImV4cCI6MTcwNTMyMjI1OH0.z6kr-lxm0-gN5dyk8vkGrE5n7Py6N5ctvO0lU-PAvE8',
 						},
 					} );
